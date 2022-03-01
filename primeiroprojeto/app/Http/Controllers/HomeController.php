@@ -14,4 +14,9 @@ class HomeController extends Controller
     {
         return view("exercicio1");
     }
+
+    public function thais()
+    {
+        return view("thaisf");
+    }
 }

@@ -24,7 +24,6 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: var(--black-color);
 }
 
 a,
@@ -33,6 +32,7 @@ a:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
+    background-color: var(--black-color);
 }
 
 .navbar {
@@ -53,104 +53,10 @@ a:focus {
 .line {
     width: 100%;
     height: 1px;
-    border-bottom: 1px dashed var(--black-color);
+    border-bottom: 1px dashed;
     margin: 40px 0;
 }
 
-/* ---------------------------------------------------
-    SIDEBAR STYLE
------------------------------------------------------ */
-
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-}
-
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    background: var(--peri-color);
-    color: var(--white-color);
-    transition: all 0.3s;
-}
-
-#sidebar.active {
-    margin-left: -250px;
-}
-
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: var(--peri-color);
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--cornsilk-color);
-}
-
-#sidebar ul p {
-    color: var(--white-color);
-    padding: 10px;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-
-#sidebar ul li a:hover {
-    color: var(--fuchsia-color);
-    background: var(--white-color);
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: var(--white-color);
-    background: var(--peri-shadow);
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: var(--peri-list);
-}
-
-ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-a.download {
-    background: var(--white-color);
-    color: var(--peri-shadow);
-}
-
-a.article,
-a.article:hover {
-    background: var(--peri-list) !important;
-    color: var(--white-color) !important;
-}
 
 /* ---------------------------------------------------
     CONTENT STYLE
