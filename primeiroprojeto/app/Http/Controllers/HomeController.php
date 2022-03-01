@@ -19,4 +19,9 @@ class HomeController extends Controller
     {
         return view("thaisf");
     }
+
+    public function home()
+    {
+        return view("layout");
+    }
 }
