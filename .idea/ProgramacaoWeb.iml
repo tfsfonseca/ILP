@@ -4,10 +4,6 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/projetoweb/app" isTestSource="false" packagePrefix="App\" />
-      <sourceFolder url="file://$MODULE_DIR$/projetoweb/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
-      <sourceFolder url="file://$MODULE_DIR$/projetoweb/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
-      <sourceFolder url="file://$MODULE_DIR$/projetoweb/tests" isTestSource="true" packagePrefix="Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/primeiroprojeto/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/primeiroprojeto/vendor/sebastian/comparator" />
       <excludeFolder url="file://$MODULE_DIR$/primeiroprojeto/vendor/sebastian/complexity" />
@@ -223,6 +219,34 @@
       <excludeFolder url="file://$MODULE_DIR$/projetoweb/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/projetoweb/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/projetoweb/vendor/laravel/breeze" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/laravel/breeze" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/illuminate/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/illuminate/macroable" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/illuminate/container" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/illuminate/support" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/illuminate/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/illuminate/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/illuminate/contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/illuminate/validation" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/egulias/email-validator" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

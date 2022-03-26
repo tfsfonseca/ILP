@@ -4,8 +4,8 @@
     </x-slot>
 
     <form action="{{route('categoria.store')}}" method="post">
+        @csrf
         <div class="sm:,l-10 p-5 bg-white border-gray-300">
-            @csrf
             <x-label>Informe a descricao: </x-label>
             <x-input type="text" name="descricao" class="block mt-1 w-full"/>
         </div>

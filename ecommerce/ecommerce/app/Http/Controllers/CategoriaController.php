@@ -70,7 +70,8 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categoria = Categoria::findOrFail($id);
+        return view("categoria.edit", compact("categoria"));
     }
 
     /**
@@ -82,7 +83,15 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try
+        {
+            $categoria = new Categoria();
+            $dados = $request->only($categoria->getFillable());
+            Categoria::whereId($id)->update($dados);
+            return redirect()->action([CategoriaController::class, 'index']);
+        } catch (\Exception $e) {
+            echo "Erro ao alterar: ".$e->getMessage();
+        }
     }
 
     /**
@@ -93,6 +102,11 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            Categoria::destroy($id);
+            return redirect()->action([CategoriaController::class, 'index']);
+        } catch (\Exception $e) {
+            echo "Erro ao  excluir".$e->getMessage();
+        }
     }
 }

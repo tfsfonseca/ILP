@@ -217,6 +217,34 @@
       <path value="$PROJECT_DIR$/projetoweb/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/projetoweb/vendor/facade/flare-client-php" />
       <path value="$PROJECT_DIR$/projetoweb/vendor/laravel/breeze" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/laravel/breeze" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/illuminate/translation" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/illuminate/validation" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/composer" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/egulias/email-validator" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3">
