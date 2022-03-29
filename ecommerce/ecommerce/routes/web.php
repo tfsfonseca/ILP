@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\FornecedorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resources([
-    'categoria' => \App\Http\Controllers\CategoriaController::class
+    'categoria' => CategoriaController::class
 ]);
 
+Route::resources([
+    'fornecedor' => FornecedorController::class
+]);
 
 Route::get('/', function () {
     return view('welcome');

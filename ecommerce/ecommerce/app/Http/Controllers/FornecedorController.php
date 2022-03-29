@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categoria;
+use App\Models\Fornecedor;
 use Illuminate\Http\Request;
 
-class CategoriaController extends Controller
+class FornecedorController extends Controller
 {
     public function __construct()
     {
@@ -19,8 +19,8 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        $categorias = Categoria::all();
-        return view('categoria.index', compact('categorias'));
+        $fornecedores = Fornecedor::all();
+        return view('fornecedor.index', compact('fornecedores'));
     }
 
     /**
@@ -30,7 +30,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view ('categoria.create');
+        return view("fornecedor.create");
     }
 
     /**
@@ -42,12 +42,12 @@ class CategoriaController extends Controller
     public function store(Request $request)
     {
         try {
-            $categoria = new Categoria();
-            $dados = $request->only($categoria->getFillable());
-            Categoria::create($dados);
-            return redirect()->action([CategoriaController::class, 'index']);
+            $fornecedor = new Fornecedor();
+            $dados = $request->only($fornecedor->getFillable());
+            Fornecedor::create($dados);
+            return redirect()->action([FornecedorController::class, 'index']);
         } catch (\Exception $e){
-            echo "Erro ao inserir";
+            echo "Erro ao inserir. Tente novamente.";
         }
     }
 
@@ -70,8 +70,8 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-        $categoria = Categoria::findOrFail($id);
-        return view("categoria.edit", compact("categoria"));
+        $fornecedor = Fornecedor::findOrFail($id);
+        return view("fornecedor.edit", compact("fornecedor"));
     }
 
     /**
@@ -85,10 +85,10 @@ class CategoriaController extends Controller
     {
         try
         {
-            $categoria = new Categoria();
-            $dados = $request->only($categoria->getFillable());
-            Categoria::whereId($id)->update($dados);
-            return redirect()->action([CategoriaController::class, 'index']);
+            $fornecedor = new Fornecedor();
+            $dados = $request->only([$fornecedor->getFillable()]);
+            Fornecedor::whereIn($id)->update($dados);
+            return redirect()->action([FornecedorController::class, 'index']);
         } catch (\Exception $e) {
             echo "Erro ao alterar: ".$e->getMessage();
         }
@@ -103,8 +103,8 @@ class CategoriaController extends Controller
     public function destroy($id)
     {
         try{
-            Categoria::destroy($id);
-            return redirect()->action([CategoriaController::class, 'index']);
+            Fornecedor::destroy($id);
+            return redirect()->action([FornecedorController::class, 'index']);
         } catch (\Exception $e) {
             echo "Erro ao  excluir".$e->getMessage();
         }
