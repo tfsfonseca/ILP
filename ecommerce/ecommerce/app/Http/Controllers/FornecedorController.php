@@ -86,8 +86,8 @@ class FornecedorController extends Controller
         try
         {
             $fornecedor = new Fornecedor();
-            $dados = $request->only([$fornecedor->getFillable()]);
-            Fornecedor::whereIn($id)->update($dados);
+            $dados = $request->only($fornecedor->getFillable());
+            Fornecedor::whereId($id)->update($dados);
             return redirect()->action([FornecedorController::class, 'index']);
         } catch (\Exception $e) {
             echo "Erro ao alterar: ".$e->getMessage();
