@@ -2,7 +2,7 @@
     <p align="center">
         <p> Caso a aplicação não funcionar: </p>
         <p> 1º- No terminal, digitar <b>composer update</b></p>
-        <p> 2º- Após atualizar o composer, verificar se há o arquivo <b>.env<b>. Se não houver, digitar: <b>copy .env.example .env</p>
+        <p> 2º- Após atualizar o composer, verificar se há o arquivo <b>.env<b>. Se não houver, digitar: <b>copy .env.example .env</b></p>
         <p>     Abrir o arquivo <b>.env</b> e atualizar na linha 14 o nome da DB_DATABASE para <b>ecommerce</b></p>
         <p> 3º- Digitar no terminal <b>php artisan key:generate</b></p>
         <p> 4º- Rodar a aplicação normalmente com o comando <b>php artisan serve</b></p>   
