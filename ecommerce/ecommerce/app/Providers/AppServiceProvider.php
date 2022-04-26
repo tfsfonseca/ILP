@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //Schema::defaultStringLength(191)
+        //se der problema com o tamanho da tabela
     }
 }

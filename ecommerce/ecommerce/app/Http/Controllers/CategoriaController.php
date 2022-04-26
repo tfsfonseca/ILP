@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categoria;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class CategoriaController extends Controller
 {
@@ -19,6 +20,7 @@ class CategoriaController extends Controller
      */
     public function index()
     {
+        Gate::authorize("acesso-administrador");
         $categorias = Categoria::all();
         return view('categoria.index', compact('categorias'));
     }
