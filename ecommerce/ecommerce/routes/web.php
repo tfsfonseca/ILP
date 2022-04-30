@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\FornecedorController;
+use App\Http\Controllers\ProdutoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,10 @@ Route::resources([
 
 Route::resources([
     'fornecedor' => FornecedorController::class
+]);
+
+Route::resources([
+    'produto' => ProdutoController::class
 ]);
 
 Route::get('/', function () {
