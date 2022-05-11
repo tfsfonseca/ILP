@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
+use App\Models\Fornecedor;
 use App\Models\Produto;
 use Illuminate\Http\Request;
 
@@ -31,8 +32,9 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        $categorias = Categorias::all();
-        return view("produto.create", compact("categorias"));
+        $categorias = Categoria::all();
+        $fornecedores = Fornecedor::all();
+        return view("produto.create", compact("categorias", "fornecedores"));
     }
 
     /**
@@ -49,7 +51,7 @@ class ProdutoController extends Controller
             Produto::create($dados);
             return redirect()->action([ProdutoController::class, 'index']) ->with("resposta", "Registro inserido.");
         } catch (\Exception $e){
-            return redirect()->action([ProdutoController::class, 'index']) ->with("resposta", "Erro ao inserir.");
+            return redirect()->action([ProdutoController::class, 'index']) ->with("resposta", "Erro ao inserir.".$e->getMessage());
         }
     }
 
@@ -74,7 +76,8 @@ class ProdutoController extends Controller
     {
         $categorias = Categoria::all();
         $produto = Produto::findOrFail($id);
-        return view ("produto.edit", compact("categorias", "produto"));
+        $fornecedores = Fornecedor::all();
+        return view ("produto.edit", compact("categorias", "fornecedores", "produto"));
     }
 
     /**
