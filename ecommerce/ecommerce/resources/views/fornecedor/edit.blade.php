@@ -27,7 +27,7 @@
                         <div>
                             <x-label>Nome do Fornecedor:</x-label>
                             <x-input name="nomeEmpresa" value="{{$fornecedor->nomeEmpresa}}"
-                                     class="block mt-1 w-full" disabled/>
+                                     class="block mt-1 w-full"/>
                         </div>
                         <div>
                             <x-label>Informe o número de contato:</x-label>

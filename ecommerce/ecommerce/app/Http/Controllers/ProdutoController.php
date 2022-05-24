@@ -95,7 +95,7 @@ class ProdutoController extends Controller
             Produto::whereId($id)->update($dados);
             return redirect()->action([ProdutoController::class, "index"])->with("resposta", "Registro alterado");
         } catch (\Exception $e) {
-            return redirect()->action([ProdutoController::class. "index"])->with("resposta", "Erro ao alterar");
+            return redirect()->action([ProdutoController::class, "index"])->with("resposta", "Erro ao alterar");
         }
     }
 
@@ -111,7 +111,7 @@ class ProdutoController extends Controller
             Produto::destroy($id);
             return redirect()->action([ProdutoController::class, "index"])->with("resposta", "Registro alterado");
         } catch (\Exception $e) {
-            return redirect()->action([ProdutoController::class. "index"])->with("resposta", "Erro ao alterar");
+            return redirect()->action([ProdutoController::class, "index"])->with("resposta", "Erro ao alterar");
         }
     }
 }

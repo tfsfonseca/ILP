@@ -8,6 +8,12 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
 
+                    <div>
+                        @if(session('resposta'))
+                            {{session('resposta')}}
+                        @endif
+                    </div>
+
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -51,7 +57,11 @@
                                         <a href="{{route('fornecedor.edit', $f->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Alterar</a>
                                     </td>
                                     <td class="px-6 py-4">
-                                        <a href="{{route('fornecedor.destroy', $f->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Excluir</a>
+                                        <form action="{{route('fornecedor.destroy', $f->id)}}" method="POST">
+                                            @csrf
+                                            @method("DELETE")
+                                        <button class="font-medium text-blue-600 dark:text-blue-500 hover:underline" type="submit">Excluir</button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

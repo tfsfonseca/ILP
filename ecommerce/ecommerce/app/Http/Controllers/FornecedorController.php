@@ -106,7 +106,7 @@ class FornecedorController extends Controller
             Fornecedor::destroy($id);
             return redirect()->action([FornecedorController::class, 'index']);
         } catch (\Exception $e) {
-            echo "Erro ao  excluir".$e->getMessage();
+            return redirect()->action([FornecedorController::class, "index"])->with("resposta", "Erro ao excluir.");
         }
     }
 }

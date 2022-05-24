@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\FornecedorController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,9 +29,15 @@ Route::resources([
     'produto' => ProdutoController::class
 ]);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get(
+    '/', [HomeController::class,'index' ]);
+
+Route::get(
+    '/detalhe/{id}', [HomeController::class, 'detalhe']);
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

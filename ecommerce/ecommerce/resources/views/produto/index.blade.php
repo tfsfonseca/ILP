@@ -1,17 +1,25 @@
 <x-app-layout>
     <x-slot name="header">
-        Todas os Produtos
+        Todos os Produtos
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+        @if(session('resposta'))
+            <div class="py-6">
+                <div class="max-w-7xl mx-auto">
+                    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                        <div class="p-6 bg-white border-b border-gray-200">
+                            <b>{{session('resposta')}}</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
 
-                    <div>
-                        @if(session('resposta'))
-                            {{session('resposta')}}
-                        @endif
-                    </div>
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -26,7 +34,7 @@
                                     Categoria
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-
+                                    Fornecedor
                                 </th>
                                 <th scope="col" class="px-6 py-3">
 
@@ -45,13 +53,18 @@
                                 <td class="px-6 py-4">
                                     {{$p->categoria->descricao}}
                                 </td>
+                                <td class="px-6 py-4">
+                                    {{$p->fornecedor->nomeEmpresa}}
+                                </td>
                                 <td class="px-6 py-4 text-right">
                                     <a href="{{route("produto.edit", $p->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Alterar</a>
                                 </td>
                                 <td class="px-6 py-4 text-right">
-                                    @csrf
-                                    @method("DELETE")
-                                    <a href="{{route("produto.destroy", $p->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Excluir</a>
+                                    <form action="{{route('produto.destroy', $p->id)}}" method="POST">
+                                        @csrf
+                                        @method("DELETE")
+                                        <button class="font-medium text-blue-600 dark:text-blue-500 hover:underline" type="submit">Excluir</button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
