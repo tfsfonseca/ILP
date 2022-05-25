@@ -246,8 +246,8 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v8.83.11",
-            "version_normalized": "8.83.11.0",
+            "version": "v8.83.14",
+            "version_normalized": "8.83.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -303,8 +303,8 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v8.83.11",
-            "version_normalized": "8.83.11.0",
+            "version": "v8.83.14",
+            "version_normalized": "8.83.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -357,8 +357,8 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v8.83.11",
-            "version_normalized": "8.83.11.0",
+            "version": "v8.83.14",
+            "version_normalized": "8.83.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -408,8 +408,8 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v8.83.11",
-            "version_normalized": "8.83.11.0",
+            "version": "v8.83.14",
+            "version_normalized": "8.83.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -473,8 +473,8 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v8.83.11",
-            "version_normalized": "8.83.11.0",
+            "version": "v8.83.14",
+            "version_normalized": "8.83.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -522,17 +522,17 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v8.83.11",
-            "version_normalized": "8.83.11.0",
+            "version": "v8.83.14",
+            "version_normalized": "8.83.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "3f1de19528fc235d666f73d540d13a684da6bf3a"
+                "reference": "89245b6e19017f627a35af3874ad9251b76b02cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/3f1de19528fc235d666f73d540d13a684da6bf3a",
-                "reference": "3f1de19528fc235d666f73d540d13a684da6bf3a",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/89245b6e19017f627a35af3874ad9251b76b02cc",
+                "reference": "89245b6e19017f627a35af3874ad9251b76b02cc",
                 "shasum": ""
             },
             "require": {
@@ -557,7 +557,7 @@
                 "symfony/var-dumper": "Required to use the dd function (^5.4).",
                 "vlucas/phpdotenv": "Required to use the Env class and env helper (^5.4.1)."
             },
-            "time": "2022-04-11T14:26:37+00:00",
+            "time": "2022-05-09T16:28:53+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -593,8 +593,8 @@
         },
         {
             "name": "illuminate/translation",
-            "version": "v8.83.11",
-            "version_normalized": "8.83.11.0",
+            "version": "v8.83.14",
+            "version_normalized": "8.83.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
@@ -648,17 +648,17 @@
         },
         {
             "name": "illuminate/validation",
-            "version": "v8.83.11",
-            "version_normalized": "8.83.11.0",
+            "version": "v8.83.14",
+            "version_normalized": "8.83.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
-                "reference": "49b1cfd3a32f04255eed68fc1c304659de50e374"
+                "reference": "4e69c4e5552b6c2cddc260f0b4f96c0aa1518287"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/validation/zipball/49b1cfd3a32f04255eed68fc1c304659de50e374",
-                "reference": "49b1cfd3a32f04255eed68fc1c304659de50e374",
+                "url": "https://api.github.com/repos/illuminate/validation/zipball/4e69c4e5552b6c2cddc260f0b4f96c0aa1518287",
+                "reference": "4e69c4e5552b6c2cddc260f0b4f96c0aa1518287",
                 "shasum": ""
             },
             "require": {
@@ -678,7 +678,7 @@
                 "ext-bcmath": "Required to use the multiple_of validation rule.",
                 "illuminate/database": "Required to use the database presence verifier (^8.0)."
             },
-            "time": "2022-02-01T16:13:18+00:00",
+            "time": "2022-05-12T15:00:22+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -711,17 +711,17 @@
         },
         {
             "name": "laravel/breeze",
-            "version": "v1.9.0",
-            "version_normalized": "1.9.0.0",
+            "version": "v1.9.1",
+            "version_normalized": "1.9.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/breeze.git",
-                "reference": "0d7633380c81d0827f40f6064d38f8884f5c5441"
+                "reference": "cde98d03954bfcad0c9370c825187b8a579d94e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/breeze/zipball/0d7633380c81d0827f40f6064d38f8884f5c5441",
-                "reference": "0d7633380c81d0827f40f6064d38f8884f5c5441",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/cde98d03954bfcad0c9370c825187b8a579d94e1",
+                "reference": "cde98d03954bfcad0c9370c825187b8a579d94e1",
                 "shasum": ""
             },
             "require": {
@@ -730,7 +730,7 @@
                 "illuminate/validation": "^8.42|^9.0",
                 "php": "^7.3|^8.0"
             },
-            "time": "2022-03-26T16:06:30+00:00",
+            "time": "2022-05-12T00:02:24+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {

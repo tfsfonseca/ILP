@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\CompraController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FornecedorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
@@ -30,17 +32,23 @@ Route::resources([
 ]);
 
 Route::get(
-    '/', [HomeController::class,'index' ]);
+    '/', [HomeController::class,'index']);
 
 Route::get(
     '/detalhe/{id}', [HomeController::class, 'detalhe']);
+
+Route::get(
+    '/carrinho', [CompraController::class, 'compras'])->name('carrinho');
 
 //Route::get('/', function () {
 //    return view('welcome');
 //});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+//Route::get('/dashboard', function () {
+//    return view('dashboard');
+//})->middleware(['auth'])->name('dashboard');
+
+Route::get(
+    '/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
 require __DIR__.'/auth.php';
