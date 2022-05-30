@@ -51,4 +51,13 @@ Route::get(
 Route::get(
     '/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
+Route::get(
+    '/adicionar/{id}', [CompraController::class, 'adicionar'])->name('adicionar');
+
+Route::get(
+    '/remover/{id}', [CompraController::class, 'remover'])->name('remover');
+
+Route::get(
+    '/finalizar/{id}', [CompraController::class, 'finalizar'])->name('finalizar');
+
 require __DIR__.'/auth.php';

@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        Editar Produto
+        Novo Produto
     </x-slot>
 
     <div class="py-12">
@@ -14,8 +14,12 @@
                             <x-input name="nome" class="block mt-1 w-full"/>
                         </div>
                         <div>
-                            <x-label>Informe a descricao:</x-label>
+                            <x-label>Informe a descrição:</x-label>
                             <x-input name="descricao" class="block mt-1 w-full"/>
+                        </div>
+                        <div>
+                            <x-label>Informe o preço:</x-label>
+                            <x-input name="preco" class="block mt-1 w-full"/>
                         </div>
                         <div>
                             <x-label> Selecione a categoria: </x-label>
