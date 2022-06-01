@@ -35,14 +35,13 @@ Route::get(
     '/', [HomeController::class,'index']);
 
 Route::get(
+    '/welcome', [HomeController::class,'index'])->name('home');
+
+Route::get(
     '/detalhe/{id}', [HomeController::class, 'detalhe']);
 
 Route::get(
     '/carrinho', [CompraController::class, 'compras'])->name('carrinho');
-
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 
 //Route::get('/dashboard', function () {
 //    return view('dashboard');
@@ -58,6 +57,6 @@ Route::get(
     '/remover/{id}', [CompraController::class, 'remover'])->name('remover');
 
 Route::get(
-    '/finalizar/{id}', [CompraController::class, 'finalizar'])->name('finalizar');
+    '/finalizar/', [CompraController::class, 'finalizar'])->name('finalizar');
 
 require __DIR__.'/auth.php';

@@ -6,7 +6,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
         @if(session('resposta'))
-            <div class="py-6">
+            <div class="py-2">
                 <div class="max-w-7xl mx-auto">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6 bg-white border-b border-gray-200">
@@ -18,8 +18,7 @@
         @endif
 
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-
+                <div class="p-6 bg-white border-b border-gray-200 pb-0">
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -29,6 +28,12 @@
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Descrição
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Preço
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Quantidade em Estoque
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     Categoria
@@ -51,6 +56,12 @@
                                     {{$p->descricao}}
                                 </td>
                                 <td class="px-6 py-4">
+                                    {{$p->preco}}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{$p->quantidade}}
+                                </td>
+                                <td class="px-6 py-4">
                                     {{$p->categoria->descricao}}
                                 </td>
                                 <td class="px-6 py-4">
@@ -71,14 +82,13 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="flex items-center mt-4 mb-10">
+                    <div class="flex items-center mt-4 mb-10 pl-0">
                         <a class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white
                         uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300
-                        disabled:opacity-25 transition ease-in-out duration-150 ml-3" href="{{ route('produto.create')}}" >Novo Registro</a>
+                        disabled:opacity-25 transition ease-in-out duration-150 ml-3" href="{{ route('produto.create')}}">Novo Registro</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </x-app-layout>

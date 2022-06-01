@@ -11,19 +11,23 @@
                         @csrf
                         <div>
                             <x-label>Informe o nome:</x-label>
-                            <x-input name="nome" class="block mt-1 w-full"/>
+                            <x-input name="nome" class="block mt-1 w-full p-2"/>
                         </div>
                         <div>
                             <x-label>Informe a descrição:</x-label>
-                            <x-input name="descricao" class="block mt-1 w-full"/>
+                            <x-input name="descricao" class="block mt-1 w-full p-2"/>
                         </div>
                         <div>
                             <x-label>Informe o preço:</x-label>
-                            <x-input name="preco" class="block mt-1 w-full"/>
+                            <x-input name="preco" class="block mt-1 w-full p-2"/>
+                        </div>
+                        <div>
+                            <x-label>Quantidade em estoque:</x-label>
+                            <x-input name="quantidade" class="block mt-1 w-full  p-2"/>
                         </div>
                         <div>
                             <x-label> Selecione a categoria: </x-label>
-                            <select name="categoria_id">
+                            <select name="categoria_id" class="sm:rounded-lg">
                                 @foreach($categorias as $c)
                                     <option value="{{$c->id}}">{{$c->descricao}}</option>
                                 @endforeach
@@ -31,13 +35,13 @@
                         </div>
                         <div>
                             <x-label> Selecione o fornecedor: </x-label>
-                            <select name="fornecedor_id">
+                            <select name="fornecedor_id" class="sm:rounded-lg">
                                 @foreach($fornecedores as $f)
                                     <option value="{{$f->id}}">{{$f->nomeEmpresa}}</option>
                                 @endforeach
                             </select>
                         </div>
-                        <div class="mt-5 pt-2">
+                        <div class="mt-5 pt-8">
                             <x-button>Salvar</x-button>
                         </div>
                     </form>

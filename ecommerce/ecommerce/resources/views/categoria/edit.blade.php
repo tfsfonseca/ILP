@@ -11,9 +11,9 @@
                         @csrf
                         @method("PATCH")
                         <div>
-                            <x-label>Informe a descricao:</x-label>
+                            <x-label>Informe a descrição:</x-label>
                             <x-input name="descricao" value="{{$categoria->descricao}}"
-                                     class="block mt-1 w-full"/>
+                                     class="block mt-1 w-full p-2"/>
                         </div>
                         <div class="mt-5 pt-2">
                             <x-button>Alterar</x-button>

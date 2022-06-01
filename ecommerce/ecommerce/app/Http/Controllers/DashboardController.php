@@ -14,7 +14,7 @@ class DashboardController extends Controller
 
     public function dashboard()
     {
-        Gate::authorize('acesso-aministrador');
+        Gate::authorize('acesso-administrador');
         return view('dashboard');
     }
 }

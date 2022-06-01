@@ -3,7 +3,7 @@
         Editar Informações de Fornecedor
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 pt-5">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
@@ -11,9 +11,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 pt-5">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <form action="{{route('fornecedor.update',$fornecedor->id)}}" method="post">
@@ -22,22 +21,22 @@
                         <div>
                             <x-label>CNPJ:</x-label>
                             <x-input name="cnpj" value="{{$fornecedor->cnpj}}"
-                                     class="block mt-1 w-full" disabled/>
+                                     class="block mt-1 w-full p-2" disabled/>
                         </div>
                         <div>
                             <x-label>Nome do Fornecedor:</x-label>
                             <x-input name="nomeEmpresa" value="{{$fornecedor->nomeEmpresa}}"
-                                     class="block mt-1 w-full"/>
+                                     class="block mt-1 w-full p-2" disabled/>
                         </div>
                         <div>
                             <x-label>Informe o número de contato:</x-label>
                             <x-input name="contato" value="{{$fornecedor->contato}}"
-                                     class="block mt-1 w-full"/>
+                                     class="block mt-1 w-full p-2"/>
                         </div>
                         <div>
                             <x-label>Informe o e-mail de contato:</x-label>
                             <x-input name="email" value="{{$fornecedor->email}}"
-                                     class="block mt-1 w-full"/>
+                                     class="block mt-1 w-full p-2"/>
                         </div>
                         <div class="mt-5 pt-2">
                             <x-button>Alterar</x-button>

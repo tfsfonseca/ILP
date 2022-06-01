@@ -13,7 +13,7 @@
                         ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ml-3" href="{{ route('categoria.create')}}" >Novo Registro</a>
                     </div>
                     <div class="align-middle inline-block min-w-full shadow overflow-hidden bg-white shadow-dashboard px-8 pt-3
-                                rounded-bl-lg rounded-br-lg mt-8 ">
+                                rounded-bl-lg rounded-br-lg">
                         <table class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                             <thead>
                             <tr>

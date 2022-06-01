@@ -11,7 +11,7 @@
                         @csrf
                         <div>
                             <x-label>Informe a descrição:</x-label>
-                            <x-input name="descricao" class="block mt-1 w-full"/>
+                            <x-input name="descricao" class="block mt-1 w-full p-2"/>
                         </div>
                         <div class="mt-5 pt-2">
                             <x-button>Salvar</x-button>

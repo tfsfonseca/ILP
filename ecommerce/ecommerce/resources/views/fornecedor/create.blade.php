@@ -11,19 +11,19 @@
                         @csrf
                         <div>
                             <x-label>Informe o CNPJ:</x-label>
-                            <x-input name="cnpj" class="block mt-1 w-full"/>
+                            <x-input name="cnpj" class="block mt-1 w-full p-2"/>
                         </div>
                         <div>
                             <x-label>Informe o nome do Fornecedor:</x-label>
-                            <x-input name="nomeEmpresa" class="block mt-1 w-full"/>
+                            <x-input name="nomeEmpresa" class="block mt-1 w-full p-2"/>
                         </div>
                         <div>
                             <x-label>Informe o número de contato:</x-label>
-                            <x-input name="contato" class="block mt-1 w-full"/>
+                            <x-input name="contato" class="block mt-1 w-full p-2"/>
                         </div>
                         <div>
                             <x-label>Informe o e-mail:</x-label>
-                            <x-input name="email" class="block mt-1 w-full"/>
+                            <x-input name="email" class="block mt-1 w-full p-2"/>
                         </div>
                         <div class="mt-5 pt-2">
                             <x-button>Salvar</x-button>
