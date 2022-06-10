@@ -20,6 +20,7 @@ class HomeController extends Controller
     public function detalhe($id)
     {
         $produto = Produto::findOrFail($id);
+        //como incluir o orderBy()->get();
         return view("produto", compact("produto"));
     }
 }

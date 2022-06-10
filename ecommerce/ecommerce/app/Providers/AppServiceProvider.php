@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Charts\Graficos;
+use ConsoleTVs\Charts\Registrar;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -21,9 +24,11 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Registrar $charts)
     {
-        //Schema::defaultStringLength(191)
-        //se der problema com o tamanho da tabela
+        Schema::defaultStringLength(191);
+        $charts->register([Graficos::class]);
+
+        //se der problema com o tamanho da tabela, usar o schema
     }
 }
