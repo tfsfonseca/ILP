@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class CompraProduto extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['quantidade_selecionada'];
 }

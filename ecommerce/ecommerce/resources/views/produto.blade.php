@@ -61,7 +61,7 @@
                             {{$produto->descricao}}
                         </h3>
                         <h3 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white mb-5">
-                            {{$produto->categoria->nome}}
+                            {{$produto->quantidade}}
                         </h3>
                         <!-- QUANTIDADE
                              tem que incluir um forms ou é melhor limitar com a setinha [+1]?-->

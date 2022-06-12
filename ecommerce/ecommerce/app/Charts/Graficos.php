@@ -22,10 +22,11 @@ class Graficos extends BaseChart
      */
     public function handler(Request $request): Chartisan
     {
-        $nome_produtos = Produto::orderBy('nome')->pluck('preco', 'nome');
-        $valores = Produto::orderBy('preco')->all();
+        $nome_produtos = Produto::pluck('nome')->toArray();
+        $valores = Produto::pluck('preco');
+
         return Chartisan::build()
             ->labels($nome_produtos)
-            ->dataset('Valores', $valores);
+            ->dataset('Valores', $valores->toArray());
     }
 }

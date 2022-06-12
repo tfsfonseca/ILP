@@ -27,7 +27,7 @@
                         </div>
                         <div>
                             <x-label>Quantidade disponível em estoque:</x-label>
-                            <x-input name="nome" value="{{$produto->quantidade}}"
+                            <x-input name="quantidade" value="{{$produto->quantidade}}"
                                      class="block mt-1 w-full p-2"/>
                         </div>
                         <div>

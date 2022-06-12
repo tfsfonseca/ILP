@@ -26,9 +26,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Registrar $charts)
     {
+        //se der problema com o tamanho da tabela, usar o schema
         Schema::defaultStringLength(191);
+
+        //para cada chart, adicionar uma linha NO/DENTRO DO!!!! register
+        //coloca uma vírgula depois do class e inclui o nome da classe
         $charts->register([Graficos::class]);
 
-        //se der problema com o tamanho da tabela, usar o schema
+
     }
 }
