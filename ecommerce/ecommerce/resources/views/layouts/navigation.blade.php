@@ -47,6 +47,9 @@
                 <x-nav-link :href="route('carrinho')" :active="request()->routeIs('carrinho')" class="pl-4 blue:text-gray-400">
                     {{ __('Carrinho') }}
                 </x-nav-link>
+                <x-nav-link :href="route('relatorio')" :active="request()->routeIs('relatorio')" class="pl-4 blue:text-gray-400">
+                    {{ __('Relatório') }}
+                </x-nav-link>
 
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
