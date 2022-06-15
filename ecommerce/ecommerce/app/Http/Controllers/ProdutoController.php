@@ -6,6 +6,7 @@ use App\Models\Categoria;
 use App\Models\Fornecedor;
 use App\Models\Produto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class ProdutoController extends Controller
 {
@@ -21,6 +22,7 @@ class ProdutoController extends Controller
      */
     public function index()
     {
+        Gate::authorize("acesso-administrador");
         $produtos = Produto::all();
         return view("produto.index", compact("produtos"));
     }

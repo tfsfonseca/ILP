@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Fornecedor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class FornecedorController extends Controller
 {
@@ -19,6 +20,7 @@ class FornecedorController extends Controller
      */
     public function index()
     {
+        Gate::authorize("acesso-administrador");
         $fornecedores = Fornecedor::all();
         return view('fornecedor.index', compact('fornecedores'));
     }

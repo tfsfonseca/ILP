@@ -36,6 +36,11 @@
                         {{ __('Produto') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('relatorio')" :active="request()->routeIs('relatorio')" class="pl-4 blue:text-gray-400">
+                        {{ __('Relatório') }}
+                    </x-nav-link>
+                </div>
                 @endif
             </div>
 
@@ -46,9 +51,6 @@
                 </x-nav-link>
                 <x-nav-link :href="route('carrinho')" :active="request()->routeIs('carrinho')" class="pl-4 blue:text-gray-400">
                     {{ __('Carrinho') }}
-                </x-nav-link>
-                <x-nav-link :href="route('relatorio')" :active="request()->routeIs('relatorio')" class="pl-4 blue:text-gray-400">
-                    {{ __('Relatório') }}
                 </x-nav-link>
 
                 <x-dropdown align="right" width="48">

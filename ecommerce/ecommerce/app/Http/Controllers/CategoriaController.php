@@ -32,6 +32,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
+        Gate::authorize("acesso-administrador");
         return view ('categoria.create');
     }
 
@@ -43,6 +44,7 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
+        Gate::authorize("acesso-administrador");
         try {
             $categoria = new Categoria();
             $dados = $request->only($categoria->getFillable());
@@ -72,6 +74,7 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
+        Gate::authorize("acesso-administrador");
         $categoria = Categoria::findOrFail($id);
         return view("categoria.edit", compact("categoria"));
     }
@@ -85,6 +88,7 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
+        Gate::authorize("acesso-administrador");
         try
         {
             $categoria = new Categoria();
@@ -104,6 +108,7 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
+        Gate::authorize("acesso-administrador");
         try{
             Categoria::destroy($id);
             return redirect()->action([CategoriaController::class, 'index']);
