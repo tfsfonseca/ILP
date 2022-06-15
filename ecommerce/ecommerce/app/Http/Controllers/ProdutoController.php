@@ -34,6 +34,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
+        Gate::authorize("acesso-administrador");
         $categorias = Categoria::all();
         $fornecedores = Fornecedor::all();
         return view("produto.create", compact("categorias", "fornecedores"));
@@ -47,6 +48,7 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
+        Gate::authorize("acesso-administrador");
         try {
             $produto = new Produto();
             $dados = $request->only($produto->getFillable());
@@ -76,6 +78,7 @@ class ProdutoController extends Controller
      */
     public function edit($id)
     {
+        Gate::authorize("acesso-administrador");
         $categorias = Categoria::all();
         $produto = Produto::findOrFail($id);
         $fornecedores = Fornecedor::all();
@@ -91,6 +94,7 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, $id)
     {
+        Gate::authorize("acesso-administrador");
         try{
             $produto = new Produto();
             $dados = $request->only($produto->getFillable());
@@ -109,6 +113,7 @@ class ProdutoController extends Controller
      */
     public function destroy($id)
     {
+        Gate::authorize("acesso-administrador");
         try{
             Produto::destroy($id);
             return redirect()->action([ProdutoController::class, "index"])->with("resposta", "Registro alterado");

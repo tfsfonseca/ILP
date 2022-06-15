@@ -32,6 +32,7 @@ class FornecedorController extends Controller
      */
     public function create()
     {
+        Gate::authorize("acesso-administrador");
         return view("fornecedor.create");
     }
 
@@ -43,6 +44,7 @@ class FornecedorController extends Controller
      */
     public function store(Request $request)
     {
+        Gate::authorize("acesso-administrador");
         try {
             $fornecedor = new Fornecedor();
             $dados = $request->only($fornecedor->getFillable());
@@ -72,6 +74,7 @@ class FornecedorController extends Controller
      */
     public function edit($id)
     {
+        Gate::authorize("acesso-administrador");
         $fornecedor = Fornecedor::findOrFail($id);
         return view("fornecedor.edit", compact("fornecedor"));
     }
@@ -85,6 +88,7 @@ class FornecedorController extends Controller
      */
     public function update(Request $request, $id)
     {
+        Gate::authorize("acesso-administrador");
         try
         {
             $fornecedor = new Fornecedor();
@@ -104,6 +108,7 @@ class FornecedorController extends Controller
      */
     public function destroy($id)
     {
+        Gate::authorize("acesso-administrador");
         try{
             Fornecedor::destroy($id);
             return redirect()->action([FornecedorController::class, 'index']);

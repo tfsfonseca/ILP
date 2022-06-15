@@ -17,7 +17,7 @@ class CompraController extends Controller
     }
 
     public function compras()
-    { 
+    {
         $this->verificarCarrinho();
         if ($this->carrinho != null){
             $produtos = $this->carrinho->produtos;
